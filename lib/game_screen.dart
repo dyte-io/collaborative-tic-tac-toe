@@ -1,4 +1,3 @@
-import 'package:dyte_core/dyte_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/instance_manager.dart';
@@ -147,7 +146,7 @@ class HomePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        if (roomStateNotifier.roomJoin.value) // Check if room is join by the localUser or not.
+                        // if (roomStateNotifier.roomJoin.value) // Check if room is join by the localUser or not.
                           // Local user video tile and name
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -157,15 +156,18 @@ class HomePage extends StatelessWidget {
                                 width: 100,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(17),
-                                  child: const VideoView(     
-                                    isSelfParticipant: true,
-                                  ),
+                                  // child: const VideoView(      // Local user video tile
+                                  //   isSelfParticipant: true,
+                                  // ),
                                 ),
                               ),
-                              Text(roomStateNotifier.dyteClient.value.localUser.name,style: const TextStyle(color: Colors.white),)
+                              // Text(
+                              //   roomStateNotifier.dyteClient.value.localUser.name, // Local user name
+                              //   style: const TextStyle(color: Colors.white),
+                              //   )
                             ],
                           ),
-                        if (roomStateNotifier.remotePeer.value != null)
+                        // if (roomStateNotifier.remotePeer.value != null)
                         // Remote user video tile and name
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -175,13 +177,15 @@ class HomePage extends StatelessWidget {
                                 width: 100,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(17),
-                                  child: VideoView(         
-                                    meetingParticipant:
-                                        roomStateNotifier.remotePeer.value,
-                                  ),
+                                  // child: VideoView(         // Remote user video tile
+                                  //   meetingParticipant:
+                                  //       roomStateNotifier.remotePeer.value,
+                                  // ),
                                 ),
                               ),
-                              Text(roomStateNotifier.remotePeer.value!.name,style: const TextStyle(color: Colors.white),)
+                              // Text(
+                              //   roomStateNotifier.remotePeer.value!.name,   // Remote user name
+                              // style: const TextStyle(color: Colors.white),)
                             ],
                           ),
                       ],
@@ -230,7 +234,7 @@ class HomePage extends StatelessWidget {
                               onCancel: () {
                                 Get.back();
                               },
-                              confirmTextColor: Colors.white,
+                              confirmTextColor: Colors.red,
                               textCancel: "Cancel",
                               textConfirm: "Leave",
                             );
