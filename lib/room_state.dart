@@ -81,7 +81,7 @@ class RoomStateNotifier extends GetxController
   }
 
   @override
-  void onMeetingRoomLeaveStarted() {
+  void onMeetingRoomLeaveCompleted() {
     roomJoin.value = false;
     dyteClient.value.removeMeetingRoomEventsListener(this);
     dyteClient.value.removeParticipantEventsListener(this);
@@ -161,7 +161,7 @@ class RoomStateNotifier extends GetxController
   }
 
   @override
-  void onMeetingRoomLeaveCompleted() {
+  void onMeetingRoomLeaveStarted() {
     // TODO: implement onMeetingRoomLeaveCompleted
   }
 
