@@ -71,8 +71,8 @@ class RoomStateNotifier extends GetxController
   }
 
   @override
-  void onMeetingRoomLeaveStarted() {
-    // TODO: onMeetingRoomLeaveStarted code here
+  void onMeetingRoomLeaveCompleted() {
+    // TODO: onMeetingRoomLeaveCompleted code here
   }
 
   @override
@@ -112,7 +112,7 @@ class RoomStateNotifier extends GetxController
   void onMeetingRoomDisconnected() {}
 
   @override
-  void onMeetingRoomLeaveCompleted() {}
+  void onMeetingRoomLeaveStarted() {}
 
   @override
   void onActiveParticipantsChanged(List<DyteJoinedMeetingParticipant> active) {}
