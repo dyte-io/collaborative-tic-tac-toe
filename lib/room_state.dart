@@ -108,7 +108,7 @@ class RoomStateNotifier extends GetxController
           onWillPop: () async {
             return false;
           },
-          title: "Opponent Leave this game.",
+          title: "Opponent Left this game.",
           textConfirm: "Leave",
           middleText: "",
           confirmTextColor: Colors.white,
