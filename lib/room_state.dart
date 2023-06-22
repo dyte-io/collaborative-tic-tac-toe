@@ -42,7 +42,7 @@ class RoomStateNotifier extends GetxController
     dyteClient.value.chat.sendTextMessage(displayExOh.toString());
   }
 
-  toogleVideo() {
+  toggleVideo() {
     if (isVideoOn.value) {
       dyteClient.value.localUser.disableVideo();
     } else {
@@ -51,7 +51,7 @@ class RoomStateNotifier extends GetxController
     isVideoOn.toggle();
   }
 
-  toogleAudio() {
+  toggleAudio() {
     if (isAudioOn.value) {
       dyteClient.value.localUser.disableAudio();
     } else {
